@@ -9,4 +9,5 @@ class TipsController < ApplicationController
     foursquare.add_tip(session[:token], params[:venue_id], params[:tip])
     redirect_to tips_path
   end
+  
 end
