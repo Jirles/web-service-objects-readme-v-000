@@ -9,7 +9,7 @@ class TipsController < ApplicationController
 
   def create
     foursquare = FoursquareService.new
-    foursquare.add_tip()
+    foursquare.add_tip(session[:token], params[:venue_id], params[:tip])
     redirect_to tips_path
   end
 end
