@@ -29,8 +29,6 @@ class FoursquareService
       req.params['near'] = zipcode
       req.params['query'] = 'coffee shop'
     end
-
-    body = JSON.parse(resp.body)
   end
 
 end
