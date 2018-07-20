@@ -31,4 +31,8 @@ class FoursquareService
     end
   end
 
+  def add_tip()
+
+  end 
+
 end
