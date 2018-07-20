@@ -23,4 +23,6 @@ class FoursquareService
 
   def coffee_shops(client_id, client_secret, zipcode)
 
+  end 
+
 end
