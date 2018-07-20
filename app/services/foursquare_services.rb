@@ -38,6 +38,14 @@ class FoursquareService
       req.params['venueId'] = venue_id
       req.params['text'] = tip
     end
-  end 
+  end
+
+  def list_tips()
+    resp = Faraday.get("https://api.foursquare.com/v2/lists/self/tips") do |req|
+      req.params['oauth_token'] = session[:token]
+      req.params['v'] = '20160201'
+    end
+    JSON.parse(resp.body)["response"]["list"]["listItems"]["items"]
+  end
 
 end
