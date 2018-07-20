@@ -20,5 +20,7 @@ class FoursquareService
     end
     JSON.parse(resp.body)["response"]["friends"]["items"]
   end
+
+  def venues(client_id, client_secret)
   
 end
