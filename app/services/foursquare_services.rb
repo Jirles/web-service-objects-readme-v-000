@@ -40,7 +40,7 @@ class FoursquareService
     end
   end
 
-  def list_tips()
+  def list_tips(token)
     resp = Faraday.get("https://api.foursquare.com/v2/lists/self/tips") do |req|
       req.params['oauth_token'] = session[:token]
       req.params['v'] = '20160201'
