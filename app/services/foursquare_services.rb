@@ -21,6 +21,6 @@ class FoursquareService
     JSON.parse(resp.body)["response"]["friends"]["items"]
   end
 
-  def venues(client_id, client_secret)
-  
+  def coffee_shops(client_id, client_secret, zipcode)
+
 end
