@@ -12,9 +12,7 @@ class SearchesController < ApplicationController
     client_id = "CO3LIXJPH1LYAC5OOTLKLJE334NVDIYG24KUFOVEQ22WVYDP"
     client_secret = "0NNKMRWRYLCKLPSEE3G10I33WV0BTYXEN2JCJ41TVKKWB52Y"
     @resp = foursquare.coffee_shops(client_id, client_secret, params[:zipcode])
-    
     body = JSON.parse(@resp.body)
-
     if @resp.success?
       @venues = body["response"]["venues"]
     else
